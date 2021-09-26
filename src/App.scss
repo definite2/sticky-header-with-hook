@@ -1,0 +1,78 @@
+.App {
+  display: grid;
+  grid-template-areas:
+    'header header header'
+    'nav content side'
+    'footer footer footer';
+
+  grid-template-columns: 220px 1fr 220px;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+
+  header {
+    background-color: #e4e4e4;
+    color: #000000;
+    display: flex;
+    grid-area: header;
+    justify-content: center;
+    box-shadow: none;
+    border: none;
+    z-index: 10;
+    transition: box-shadow 250ms ease-in-out;
+  }
+
+  nav {
+    background-color: #554971;
+    grid-area: nav;
+    margin-left: 0.5rem;
+  }
+
+  main {
+    margin: 12rem auto 26rem auto;
+    grid-area: content;
+    padding: 1rem;
+  }
+
+  aside {
+    background-color: #554971;
+    grid-area: side;
+    margin-right: 0.5rem;
+  }
+
+  footer {
+    background-color: #2d080a;
+    color: #fff;
+    grid-area: footer;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-areas:
+      'header'
+      'nav'
+      'content'
+      'side'
+      'footer';
+
+    grid-template-columns: 1fr;
+    grid-template-rows:
+      auto /* Header */
+      minmax(75px, auto) /* Nav */
+      1fr /* Content */
+      minmax(75px, auto) /* Sidebar */
+      auto; /* Footer */
+
+    nav,
+    aside {
+      margin: 0;
+    }
+  }
+}
+.stickyHeader{
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+}
