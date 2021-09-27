@@ -1,7 +1,7 @@
 # Create Sticky Header With Custom React Hook
 Scroll up to see sticky header.
 
-## Blog About The Hook:
+## Blog About The Hook
 
 Read Create Sticky Header with Custom React Hook blog from [here](https://devmuscle/blog/blog/react-sticky-header).
 
